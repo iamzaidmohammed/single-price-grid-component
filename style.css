@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Karla:wght@400,700,900&display=swap");
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --cyan2: hsl(175, 60%, 48%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: var(--Light-Gray);
+}
+
+main {
+  display: grid;
+}
+
+.card {
+  width: 320px;
+  background-color: red;
+  padding: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.first {
+  background-color: white;
+}
+
+.f-title {
+  color: var(--cyan);
+  margin-bottom: 20px;
+}
+
+.f-subtitle {
+  margin-bottom: 20px;
+  color: var(--Bright-Yellow);
+}
+.f-text {
+  font-size: 15px;
+  line-height: 30px;
+  color: var(--Grayish-Blue);
+}
+
+.second {
+  background-color: var(--cyan);
+}
+
+.s-title {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.s-payment-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.s-payment {
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.s-payment-div > span {
+  font-size: 14px;
+  color: var(--Light-Gray);
+}
+
+.s-text {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 10px 0;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--Bright-Yellow);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.third {
+  background-color: var(--cyan2);
+}
+
+.t-title {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.t-text {
+  font-size: 15px;
+  color: var(--Light-Gray);
+  width: 70%;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .first {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 640px;
+    padding: 40px;
+  }
+}
